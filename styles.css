@@ -30,7 +30,7 @@ body {
 
 /* Layout helpers */
 .container {
-  max-width: 1024px;
+  max-width: 1400px;
   margin-inline: auto;
   padding: 1.25rem;
 }
