@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Create Your Account - Job Discovery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header" aria-label="Site header">
+      <div class="container">
+        <h1 class="site-title">Create Your Account</h1>
+        <p class="site-tagline">
+          Join our job discovery platform and start your career journey today.
+        </p>
+      </div>
+    </header>
+
+    <main id="main" class="site-main" role="main">
+      <div class="container">
+        <form class="account-form" action="#" method="post">
+          <!-- Does not actuallly save data bc of "#" -->
+          <!-- Personal information -->
+          <fieldset>
+            <legend><h2>Personal Information</h2></legend>
+
+            <div class="field">
+              <label for="firstName"
+                ><span aria-hidden="true" class="star">* </span>First Name
+                <span class="sr-only">(required)</span>
+              </label>
+              <input
+                autofocus
+                id="firstName"
+                name="firstName"
+                type="text"
+                required
+                minlength="2"
+                maxlength="50"
+                autocomplete="given-name"
+                aria-describedby="firstNameHelp"
+                placeholder="e.g. John"
+              />
+              <small id="firstNameHelp" class="help">2-50 characters.</small>
+            </div>
+
+            <div class="field">
+              <label for="lastName"
+                ><span aria-hidden="true" class="star">* </span>Last Name</label
+              >
+              <input
+                id="lastName"
+                name="lastName"
+                type="text"
+                required
+                minlength="2"
+                maxlength="50"
+                autocomplete="family-name"
+                aria-describedby="lastNameHelp"
+                placeholder="e.g. Doe"
+              />
+              <small id="lastNameHelp" class="help">2-50 characters.</small>
+            </div>
+
+            <div class="field">
+              <label for="username"
+                ><span aria-hidden="true" class="star">* </span>Username</label
+              >
+              <input
+                id="username"
+                name="username"
+                type="text"
+                required
+                pattern="^[A-Za-z0-9_-]{3,20}$"
+                inputmode="latin"
+                aria-describedby="usernameHelp"
+                placeholder="e.g., John_Doe1"
+              />
+              <small id="usernameHelp" class="help"
+                >3-20 characters: letters, numbers, underscores, dashes.</small
+              >
+            </div>
+
+            <div class="field">
+              <label for="email"
+                ><span aria-hidden="true" class="star">* </span>Email</label
+              >
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$"
+                autocomplete="email"
+                aria-describedby="emailHelp"
+                placeholder="e.g. jd@mail.com"
+              />
+              <small id="emailHelp" class="help"
+                >Your email will not be shared with 3rd parties.</small
+              >
+            </div>
+
+            <div class="field">
+              <label for="dob"
+                ><span aria-hidden="true" class="star">* </span>Date of
+                Birth</label
+              >
+              <input
+                id="dob"
+                name="dob"
+                type="date"
+                required
+                aria-describedby="dobHelp"
+              />
+              <small id="dobHelp" class="help"
+                >You must be 18 years of age or older.</small
+              >
+            </div>
+
+            <div class="field">
+              <label for="tel"
+                ><span aria-hidden="true" class="star">* </span>Telephone</label
+              >
+              <input
+                id="tel"
+                name="tel"
+                type="tel"
+                required
+                inputmode="tel"
+                autocomplete="tel"
+                aria-describedby="telHelp"
+                placeholder="+4512345678"
+              />
+              <small id="telHelp" class="help">Include country code.</small>
+            </div>
+
+            <div class="field">
+              <label for="password"
+                ><span aria-hidden="true" class="star">* </span>Password</label
+              >
+              <input
+                id="password"
+                name="password"
+                type="password"
+                required
+                minlength="8"
+                pattern="(?=.*[A-Za-z])(?=.*\d).{8,}"
+                autocomplete="new-password"
+                aria-describedby="passwordHelp"
+                placeholder="Min. 8 characters, at least 1 letter & 1 number"
+              />
+              <small id="passwordHelp" class="help"
+                >Min. 8 characters, at least 1 letter and 1 number.</small
+              >
+            </div>
+
+            <div class="field">
+              <label for="confirm"
+                ><span aria-hidden="true" class="star">* </span>Confirm Password
+              </label>
+              <input
+                id="confirm"
+                name="confirm"
+                type="password"
+                required
+                minlength="8"
+                aria-describedby="confirmHelp"
+                placeholder="Retype your password"
+              />
+              <small id="confirmHelp" class="help"
+                >Must match your password.</small
+              >
+            </div>
+
+            <div class="field field--full">
+              <label for="bio"
+                ><span aria-hidden="true" class="star">* </span>Short Bio</label
+              >
+              <textarea
+                id="bio"
+                name="bio"
+                rows="5"
+                required
+                minlength="10"
+                maxlength="500"
+                aria-describedby="bioHelp"
+                placeholder="Tell us about yourself and your career goals."
+              ></textarea>
+              <small id="bioHelp" class="help">10-500 characters.</small>
+            </div>
+          </fieldset>
+
+          <!-- Work preferences -->
+          <fieldset>
+            <legend><h2>Work Preferences</h2></legend>
+
+            <div class="field">
+              <label for="role"
+                ><span aria-hidden="true" class="star">* </span>Job Role</label
+              >
+              <select
+                id="role"
+                name="role"
+                required
+                aria-describedby="roleHelp"
+              >
+                <option value="">- Select your primary role currently -</option>
+                <option>Design (UI/UX, Visual, Product)</option>
+                <option>Front-end Development</option>
+                <option>Back-end Development</option>
+                <option>Data Science &amp; Analytics</option>
+                <option>Product Management</option>
+                <option>Newly Graduated</option>
+                <option>Without job at the moment</option>
+                <option>Other</option>
+              </select>
+              <small id="roleHelp" class="help"
+                >Choose the role that currently fits you best.</small
+              >
+            </div>
+
+            <fieldset class="subgroup">
+              <legend>
+                <span aria-hidden="true" class="star">* </span>
+                Job Seeking Status
+              </legend>
+
+              <div class="choice">
+                <input
+                  type="radio"
+                  id="status-actively"
+                  name="status"
+                  value="actively-looking"
+                  required
+                />
+                <label for="status-actively"
+                  >Actively looking for opportunities</label
+                >
+              </div>
+
+              <div class="choice">
+                <input
+                  type="radio"
+                  id="status-open"
+                  name="status"
+                  value="open-to-offers"
+                />
+                <label for="status-open">Open to offers</label>
+              </div>
+
+              <div class="choice">
+                <input
+                  type="radio"
+                  id="status-not"
+                  name="status"
+                  value="not-looking"
+                />
+                <label for="status-not">Not currently looking</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="subgroup">
+              <legend>Areas of Interest (optional)</legend>
+
+              <div class="choice">
+                <input
+                  type="checkbox"
+                  id="interest-design"
+                  name="interests"
+                  value="design"
+                />
+                <label for="interest-design"
+                  >Design (UI/UX, Visual, Product)</label
+                >
+              </div>
+
+              <div class="choice">
+                <input
+                  type="checkbox"
+                  id="interest-frontend"
+                  name="interests"
+                  value="frontend-development"
+                />
+                <label for="interest-frontend">Front-end Development</label>
+              </div>
+
+              <div class="choice">
+                <input
+                  type="checkbox"
+                  id="interest-backend"
+                  name="interests"
+                  value="backend-development"
+                />
+                <label for="interest-backend">Back-end Development</label>
+              </div>
+
+              <div class="choice">
+                <input
+                  type="checkbox"
+                  id="interest-data"
+                  name="interests"
+                  value="data-analytics"
+                />
+                <label for="interest-data">Data Science &amp; Analytics</label>
+              </div>
+
+              <div class="choice">
+                <input
+                  type="checkbox"
+                  id="interest-pm"
+                  name="interests"
+                  value="product-management"
+                />
+                <label for="interest-pm">Product Management</label>
+              </div>
+
+              <div class="choice">
+                <input
+                  type="checkbox"
+                  id="interest-other"
+                  name="interests"
+                  value="other"
+                />
+                <label for="interest-other">Other</label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="alert_range"
+                ><span aria-hidden="true" class="star">* </span>Desired Amount
+                of Weekly Job Alert Emails
+              </label>
+              <input
+                type="range"
+                name="alert_range"
+                id="alert_range"
+                min="0"
+                max="7"
+                step="1"
+              />
+              <div class="range-display">
+                <output id="rangeValue">0</output>
+              </div>
+              <small id="alertsHelp" class="help"
+                >Choose between 0 and 7 emails per week.</small
+              >
+            </div>
+
+            <div class="field">
+              <label for="photo">Profile Photo (optional)</label>
+              <input
+                id="photo"
+                name="photo"
+                type="file"
+                accept="image/*"
+                aria-describedby="photoHelp"
+              />
+              <small id="photoHelp" class="help">Max ~5MB recommended.</small>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Create Account</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="container">
+        <small>© 2025 Job Discovery</small>
+      </div>
+    </footer>
+
+    <!-- JS entry point -->
+    <script src="range.js"></script>
+  </body>
+</html>
