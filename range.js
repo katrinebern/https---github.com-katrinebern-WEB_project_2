@@ -1,18 +1,14 @@
-// ---------- RANGE SLIDER ----------
 const alertRange = document.getElementById("alert_range");
 const rangeOut = document.getElementById("rangeValue");
 
 if (alertRange && rangeOut) {
-  // Display start value
   rangeOut.textContent = alertRange.value;
 
-  // Update value when user moves slider
   alertRange.addEventListener("input", function () {
     rangeOut.textContent = alertRange.value;
   });
 }
 
-// ---------- 18+ VALIDATION ----------
 const form = document.querySelector("form");
 const dobInput = document.getElementById("dob");
 
@@ -52,7 +48,6 @@ if (form && dobInput) {
   });
 }
 
-// ---------- CONFIRM PASSWORD ----------
 const password = document.getElementById("password");
 const confirm = document.getElementById("confirm");
 
@@ -65,11 +60,9 @@ if (password && confirm) {
     }
   }
 
-  // check while writing in field
   password.addEventListener("input", checkPasswordMatch);
   confirm.addEventListener("input", checkPasswordMatch);
 
-  // check before submit
   form.addEventListener("submit", function (e) {
     checkPasswordMatch();
     if (confirm.validationMessage !== "") {
